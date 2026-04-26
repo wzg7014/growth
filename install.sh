@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # growth - install script
 # Usage: ./install.sh <platform>
-#   platforms: codex | gemini | cursor | cursor-global
+#   platforms: codex
 #
 # Claude Code users: install via the plugin marketplace instead of this script.
 #   /plugin marketplace add wzg7014/growth
@@ -21,9 +21,6 @@ Usage: ./install.sh <platform>
 
 Platforms:
   codex            Install to ~/.codex/skills/
-  gemini           Install as Gemini CLI extension (requires gemini CLI)
-  cursor           Copy .mdc rules to ./.cursor/rules/ (current project)
-  cursor-global    Copy .mdc rules to ~/.cursor/rules/ (user-wide)
 
 For Claude Code, use the plugin marketplace instead:
   /plugin marketplace add wzg7014/growth
@@ -41,15 +38,6 @@ copy_skills_to() {
   for skill in taste-audit intent-refine judgment-redteam abstraction-uplift; do
     cp -r "$SCRIPT_DIR/skills/$skill" "$dst/"
     echo "  ✓ installed: $skill"
-  done
-}
-
-copy_mdc_to() {
-  local dst="$1"
-  mkdir -p "$dst"
-  for mdc in "$SCRIPT_DIR"/platforms/cursor/rules/*.mdc; do
-    cp "$mdc" "$dst/"
-    echo "  ✓ installed: $(basename "$mdc")"
   done
 }
 
@@ -73,33 +61,6 @@ EOF
     copy_skills_to "$DST"
     echo ""
     echo "✓ Done. Restart Codex CLI to load the new skills."
-    ;;
-
-  gemini)
-    if ! command -v gemini &> /dev/null; then
-      echo "✗ 'gemini' CLI not found. Install it first: npm install -g @google/gemini-cli"
-      exit 1
-    fi
-    echo "Installing growth as a Gemini CLI extension ..."
-    gemini extensions install "$SCRIPT_DIR/platforms/gemini-cli"
-    echo ""
-    echo "✓ Done. Run 'gemini extensions list' to verify."
-    ;;
-
-  cursor)
-    DST="./.cursor/rules"
-    echo "Installing growth Cursor rules to $DST (current project) ..."
-    copy_mdc_to "$DST"
-    echo ""
-    echo "✓ Done. Open this project in Cursor and the rules will auto-load."
-    ;;
-
-  cursor-global)
-    DST="$HOME/.cursor/rules"
-    echo "Installing growth Cursor rules to $DST (user-wide) ..."
-    copy_mdc_to "$DST"
-    echo ""
-    echo "✓ Done. Cursor will auto-load these rules across all projects."
     ;;
 
   *)

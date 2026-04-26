@@ -9,7 +9,7 @@
 [![Stars](https://img.shields.io/github/stars/wzg7014/growth?style=flat&logo=github&label=Stars)](https://github.com/wzg7014/growth/stargazers)
 [![Forks](https://img.shields.io/github/forks/wzg7014/growth?style=flat&logo=github&label=Forks)](https://github.com/wzg7014/growth/network/members)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Platform](https://img.shields.io/badge/Platform-Claude%20Code%20%7C%20Codex%20%7C%20Gemini%20%7C%20Cursor-e74c3c)
+![Platform](https://img.shields.io/badge/Platform-Codex%20%7C%20Claude%20Code-e74c3c)
 
 While every AI tool promises to help you write code, docs, and decisions **faster**, growth does the opposite: **it slows you down and asks questions you don't want to ask yourself.**
 
@@ -86,14 +86,12 @@ Claude isn't reviewing the code. Claude is pushing the judgment **back onto you*
 |---|---|---|---|
 | Claude Code | Official plugin marketplace | `~/.claude/plugins/cache/…` | Namespaced: `/growth:taste-audit` |
 | Codex CLI | `./install.sh codex` | `~/.codex/skills/` | SKILL.md interoperable with Claude Code |
-| Gemini CLI | `gemini extensions install` | Gemini extension | Ships with `GEMINI.md` context |
-| Cursor | `./install.sh cursor` | `.cursor/rules/` | `.mdc` format |
 
 ---
 
 ## Install
 
-Four platforms supported — pick yours:
+This fork keeps only the Codex and Claude Code entry points:
 
 ### Claude Code
 
@@ -119,30 +117,6 @@ Codex uses the same `SKILL.md` format as Claude Code, so:
 ```
 
 Or manually copy to `~/.codex/skills/`.
-
-### Gemini CLI
-
-Install as a Gemini CLI extension:
-
-```bash
-gemini extensions install https://github.com/wzg7014/growth/tree/main/platforms/gemini-cli
-```
-
-Or via local path:
-
-```bash
-gemini extensions install ./platforms/gemini-cli
-```
-
-### Cursor
-
-```bash
-./install.sh cursor
-```
-
-This copies `platforms/cursor/rules/*.mdc` into your current project's `.cursor/rules/` directory.
-
----
 
 ## Philosophy
 
@@ -212,8 +186,7 @@ Tried it? Found a question that nailed you? Or one that felt useless? Open an is
 
 - [x] v0.1: Four skills in Claude Code format
 - [x] v0.1: Codex CLI compatibility (SKILL.md format is shared)
-- [x] v0.1: Cursor rules adaptation (.mdc format)
-- [x] v0.1: Gemini CLI extension
+- [x] v0.1: Explicit-only trigger policy
 - [ ] v0.2: Question bank iteration based on 3 months of usage
 - [ ] v0.2: Full English `SKILL.md` versions (currently Chinese only)
 - [ ] v0.3: "taste-audit for prose" (for writing, not just code)
@@ -227,7 +200,7 @@ PRs and issues welcome. Especially:
 - A question hit you → tell me (so I keep it)
 - A question felt useless → tell me (so I cut it)
 - You wrote a new question that works → PR it
-- Adaptation to other CLI/IDE tools → PR
+- Codex / Claude Code usage improvements → PR
 
 **Not welcome**:
 - PRs that make the skill "friendlier", "gentler", "more encouraging" — that violates Anti-Sycophancy

@@ -9,7 +9,7 @@
 [![Stars](https://img.shields.io/github/stars/wzg7014/growth?style=flat&logo=github&label=Stars)](https://github.com/wzg7014/growth/stargazers)
 [![Forks](https://img.shields.io/github/forks/wzg7014/growth?style=flat&logo=github&label=Forks)](https://github.com/wzg7014/growth/network/members)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Platform](https://img.shields.io/badge/Platform-Claude%20Code%20%7C%20Codex%20%7C%20Gemini%20%7C%20Cursor-e74c3c)
+![Platform](https://img.shields.io/badge/Platform-Codex%20%7C%20Claude%20Code-e74c3c)
 
 当所有 AI 工具都在告诉你"我帮你更快写代码、更快写文档、更快做判断"时，growth 做的是完全相反的事：**它让你慢下来，问出那些你不愿意问自己的问题。**
 
@@ -85,14 +85,12 @@ Claude    ❯ "还行"是真没感觉，还是感觉没想清楚？
 |---|---|---|---|
 | Claude Code | 官方插件市场 | `~/.claude/plugins/cache/…` | 带命名空间：`/growth:taste-audit` |
 | Codex CLI | `./install.sh codex` | `~/.codex/skills/` | SKILL.md 与 Claude Code 互通 |
-| Gemini CLI | `gemini extensions install` | Gemini extension | 带 `GEMINI.md` context |
-| Cursor | `./install.sh cursor` | `.cursor/rules/` | `.mdc` 格式 |
 
 ---
 
 ## 安装
 
-四个平台都支持，根据你用的工具选一个：
+当前只保留 Codex 和 Claude Code 两种入口：
 
 ### Claude Code
 
@@ -118,30 +116,6 @@ Codex 的 SKILL.md 格式和 Claude Code 完全兼容，直接：
 ```
 
 或手动复制到 `~/.codex/skills/`（Codex 的 Agent Skills 位置）。
-
-### Gemini CLI
-
-Gemini 以 extension 的方式安装：
-
-```bash
-gemini extensions install https://github.com/wzg7014/growth/tree/main/platforms/gemini-cli
-```
-
-或本地路径：
-
-```bash
-gemini extensions install ./platforms/gemini-cli
-```
-
-### Cursor
-
-```bash
-./install.sh cursor
-```
-
-会把 `platforms/cursor/rules/*.mdc` 复制到当前项目的 `.cursor/rules/` 目录。也可以复制到用户全局位置（`~/.cursor/rules/`）。
-
----
 
 ## 设计哲学
 
@@ -211,8 +185,7 @@ growth 做的是相反的事：**让你成为更好的自己**。
 
 - [x] v0.1: 四个 skill 的 Claude Code 版本
 - [x] v0.1: Codex CLI 兼容（SKILL.md 格式互通）
-- [x] v0.1: Cursor rules 适配（.mdc 格式）
-- [x] v0.1: Gemini CLI extension
+- [x] v0.1: explicit-only 触发策略
 - [ ] v0.2: 基于 3 个月使用反馈的问题库迭代
 - [ ] v0.2: 英文版 SKILL.md（目前仅中文）
 - [ ] v0.3: "taste-audit for prose"（审查写作品味，不只是代码）
@@ -226,7 +199,7 @@ growth 做的是相反的事：**让你成为更好的自己**。
 - 某个问题击中了你 → 告诉我（为了保留它）
 - 某个问题让你觉得废话 → 告诉我（为了删掉它）
 - 你加的新问题效果很好 → PR 过来
-- 其他 CLI/IDE 平台的适配 → PR
+- Codex / Claude Code 使用体验改进 → PR
 
 **不欢迎**的 PR：
 - 让 skill 变得"更友好"、"更温和"、"更鼓励用户" —— 这违反抗柔顺原则
