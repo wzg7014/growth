@@ -4,8 +4,9 @@
 import re
 from pathlib import Path
 
-SRC_DIR = Path("/home/claude/growth/skills")
-DST_DIR = Path("/home/claude/growth/platforms/cursor/rules")
+ROOT_DIR = Path(__file__).resolve().parents[1]
+SRC_DIR = ROOT_DIR / "skills"
+DST_DIR = ROOT_DIR / "platforms/cursor/rules"
 DST_DIR.mkdir(parents=True, exist_ok=True)
 
 for skill_dir in SRC_DIR.iterdir():

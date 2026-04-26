@@ -2,10 +2,12 @@
 
 > **The most counter-cultural skill set of the AI era: doesn't think for you, forces you to think.**
 
+> This fork is the **explicit-only** version: the four skills trigger only when you explicitly name a skill or say "use growth's X mode." Normal code review, requirement clarification, solution discussion, and refactoring requests stay in normal AI collaboration mode by default.
+
 [中文](./README.md) | **English**
 
-[![Stars](https://img.shields.io/github/stars/zhu1090093659/growth?style=flat&logo=github&label=Stars)](https://github.com/zhu1090093659/growth/stargazers)
-[![Forks](https://img.shields.io/github/forks/zhu1090093659/growth?style=flat&logo=github&label=Forks)](https://github.com/zhu1090093659/growth/network/members)
+[![Stars](https://img.shields.io/github/stars/wzg7014/growth?style=flat&logo=github&label=Stars)](https://github.com/wzg7014/growth/stargazers)
+[![Forks](https://img.shields.io/github/forks/wzg7014/growth?style=flat&logo=github&label=Forks)](https://github.com/wzg7014/growth/network/members)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-Claude%20Code%20%7C%20Codex%20%7C%20Gemini%20%7C%20Cursor-e74c3c)
 
@@ -44,12 +46,12 @@ The four skills target four mental bottlenecks: whether the code/design is good,
 
 ## Four Skills
 
-| Skill | When to use | Core question |
+| Skill | Explicit trigger example | Core question |
 |---|---|---|
-| **taste-audit** | You have code/design in hand, want to know if it's good | Is this beautiful? Where is it ugly? |
-| **intent-refine** | You want to do something but your description is fuzzy | What exactly do you want? Why? |
-| **judgment-redteam** | You've made a decision, leaning toward a plan | Where are you most likely wrong? |
-| **abstraction-uplift** | Your code works, but you wonder "could it be better?" | Is the current abstraction right? |
+| **taste-audit** | "Use taste-audit on this" | Is this beautiful? Where is it ugly? |
+| **intent-refine** | "Use intent-refine to sharpen this requirement" | What exactly do you want? Why? |
+| **judgment-redteam** | "Use judgment-redteam to attack my decision" | Where are you most likely wrong? |
+| **abstraction-uplift** | "Use abstraction-uplift on this abstraction" | Is the current abstraction right? |
 
 ---
 
@@ -98,7 +100,7 @@ Four platforms supported — pick yours:
 Install via the official plugin marketplace ([docs](https://code.claude.com/docs/en/plugin-marketplaces)):
 
 ```
-/plugin marketplace add YOUR_USERNAME/growth
+/plugin marketplace add wzg7014/growth
 /plugin install growth@growth
 ```
 
@@ -123,7 +125,7 @@ Or manually copy to `~/.codex/skills/`.
 Install as a Gemini CLI extension:
 
 ```bash
-gemini extensions install https://github.com/YOUR_USERNAME/growth/tree/main/platforms/gemini-cli
+gemini extensions install https://github.com/wzg7014/growth/tree/main/platforms/gemini-cli
 ```
 
 Or via local path:

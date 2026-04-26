@@ -6,10 +6,10 @@
 
 本 extension 包含四个 skill，位于 `skills/` 目录下：
 
-- **taste-audit** — 审查代码/设计的美丑（触发词：这东西好不好、还能不能更优雅）
-- **intent-refine** — 把模糊意图炼成精确 spec（触发词：我想做 XX、目标是 XX）
-- **judgment-redteam** — 红队攻击你的决策（触发词：我决定做 X、我要 Y）
-- **abstraction-uplift** — 判断抽象是否需要升级（触发词：要不要重构、是不是该提一个 XXX）
+- **taste-audit** — 审查代码/设计的美丑（仅显式点名触发）
+- **intent-refine** — 把模糊意图炼成精确 spec（仅显式点名触发）
+- **judgment-redteam** — 红队攻击你的决策（仅显式点名触发）
+- **abstraction-uplift** — 判断抽象是否需要升级（仅显式点名触发）
 
 ## 行为纲领（重要）
 
@@ -41,10 +41,10 @@
 
 这些 skill 是**对话式深度思考流程**，不是项目规则。触发方式：
 
-- **显式触发**：用户输入 `/skills` 或 `$` + skill 名称
-- **隐式触发**：当用户消息匹配 skill description 中的场景（由 Gemini 自主判断）
+- **显式触发**：用户明确点名 skill 名称，或说"用 growth 的 X 模式"
+- **不做隐式触发**：不要因为用户消息匹配代码评审、需求澄清、决策讨论、重构讨论等普通协作场景而自动进入 growth
 
-Gemini 在判断是否激活 skill 时应倾向于**主动激活**——用户明显在寻求判断、定义、决策、抽象评估时，不要等用户明说"用 taste-audit"。
+Gemini 在判断是否激活 skill 时应倾向于**不激活**。只有用户明确要求进入 growth / 某个 skill 时，才启动对应流程。
 
 ## 不触发的场景
 
@@ -60,4 +60,4 @@ Gemini 在判断是否激活 skill 时应倾向于**主动激活**——用户�
 
 ---
 
-详细说明见：https://github.com/YOUR_USERNAME/growth
+详细说明见：https://github.com/wzg7014/growth

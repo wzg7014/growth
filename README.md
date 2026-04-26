@@ -2,10 +2,12 @@
 
 > **AI 时代最反潮流的一套 skill：不替你思考，只逼你思考。**
 
+> 本 fork 是 **explicit-only** 版本：四个 skill 只有在你明确点名 skill 名称或说"用 growth 的 X 模式"时才触发。普通的代码评审、需求澄清、方案讨论和重构请求，默认仍按正常 AI 协作处理。
+
 **中文** | [English](./README.en.md)
 
-[![Stars](https://img.shields.io/github/stars/zhu1090093659/growth?style=flat&logo=github&label=Stars)](https://github.com/zhu1090093659/growth/stargazers)
-[![Forks](https://img.shields.io/github/forks/zhu1090093659/growth?style=flat&logo=github&label=Forks)](https://github.com/zhu1090093659/growth/network/members)
+[![Stars](https://img.shields.io/github/stars/wzg7014/growth?style=flat&logo=github&label=Stars)](https://github.com/wzg7014/growth/stargazers)
+[![Forks](https://img.shields.io/github/forks/wzg7014/growth?style=flat&logo=github&label=Forks)](https://github.com/wzg7014/growth/network/members)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-Claude%20Code%20%7C%20Codex%20%7C%20Gemini%20%7C%20Cursor-e74c3c)
 
@@ -44,12 +46,12 @@ growth 是一套**思考训练 skill**，装到你的 AI 编程工具里，不�
 
 ## 四个 skill
 
-| Skill | 触发场景 | 核心问题 |
+| Skill | 显式触发示例 | 核心问题 |
 |---|---|---|
-| **taste-audit** | 已经有代码/设计在手，想判断好不好 | 这东西美不美？丑在哪？ |
-| **intent-refine** | 想做某事但描述模糊，在定义需求 | 你到底想要什么？为什么？ |
-| **judgment-redteam** | 做出了决策，倾向某个方案 | 你哪里可能是错的？ |
-| **abstraction-uplift** | 代码已经 work，想问"还能不能更好" | 当前抽象合理吗？ |
+| **taste-audit** | "用 taste-audit 看这个" | 这东西美不美？丑在哪？ |
+| **intent-refine** | "用 intent-refine 精炼这个需求" | 你到底想要什么？为什么？ |
+| **judgment-redteam** | "用 judgment-redteam 攻击我的判断" | 你哪里可能是错的？ |
+| **abstraction-uplift** | "用 abstraction-uplift 看这个抽象" | 当前抽象合理吗？ |
 
 ---
 
@@ -97,7 +99,7 @@ Claude    ❯ "还行"是真没感觉，还是感觉没想清楚？
 通过官方插件市场安装（[docs](https://code.claude.com/docs/en/plugin-marketplaces)）：
 
 ```
-/plugin marketplace add YOUR_USERNAME/growth
+/plugin marketplace add wzg7014/growth
 /plugin install growth@growth
 ```
 
@@ -122,7 +124,7 @@ Codex 的 SKILL.md 格式和 Claude Code 完全兼容，直接：
 Gemini 以 extension 的方式安装：
 
 ```bash
-gemini extensions install https://github.com/YOUR_USERNAME/growth/tree/main/platforms/gemini-cli
+gemini extensions install https://github.com/wzg7014/growth/tree/main/platforms/gemini-cli
 ```
 
 或本地路径：

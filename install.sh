@@ -4,7 +4,7 @@
 #   platforms: codex | gemini | cursor | cursor-global
 #
 # Claude Code users: install via the plugin marketplace instead of this script.
-#   /plugin marketplace add YOUR_USERNAME/growth
+#   /plugin marketplace add wzg7014/growth
 #   /plugin install growth@growth
 # See https://code.claude.com/docs/en/plugin-marketplaces
 
@@ -26,7 +26,7 @@ Platforms:
   cursor-global    Copy .mdc rules to ~/.cursor/rules/ (user-wide)
 
 For Claude Code, use the plugin marketplace instead:
-  /plugin marketplace add YOUR_USERNAME/growth
+  /plugin marketplace add wzg7014/growth
   /plugin install growth@growth
 
 Example:
@@ -59,7 +59,7 @@ case "$PLATFORM" in
 ✗ Claude Code no longer uses this script.
 
 Install via the official plugin marketplace instead:
-  /plugin marketplace add YOUR_USERNAME/growth
+  /plugin marketplace add wzg7014/growth
   /plugin install growth@growth
 
 Docs: https://code.claude.com/docs/en/plugin-marketplaces
