@@ -2,7 +2,7 @@
 
 > **The most counter-cultural skill set of the AI era: doesn't think for you, forces you to think.**
 
-> This fork is the **explicit-only** version: the four skills trigger only when you explicitly name a skill or say "use growth's X mode." Normal code review, requirement clarification, solution discussion, and refactoring requests stay in normal AI collaboration mode by default.
+> This fork uses **bounded natural-language triggers**: you do not need to name a skill. Phrases like "summarize this requirement," "what do you think is wrong with this design," "where might I be wrong," or "what does this abstraction mean" enter the corresponding thinking-training flow. If you explicitly ask for direct execution, edits, or a finished draft, it stays in normal AI collaboration mode.
 
 [中文](./README.md) | **English**
 
@@ -46,12 +46,12 @@ The four skills target four mental bottlenecks: whether the code/design is good,
 
 ## Four Skills
 
-| Skill | Explicit trigger example | Core question |
+| Skill | Natural-language trigger example | Core question |
 |---|---|---|
-| **taste-audit** | "Use taste-audit on this" | Is this beautiful? Where is it ugly? |
-| **intent-refine** | "Use intent-refine to sharpen this requirement" | What exactly do you want? Why? |
-| **judgment-redteam** | "Use judgment-redteam to attack my decision" | Where are you most likely wrong? |
-| **abstraction-uplift** | "Use abstraction-uplift on this abstraction" | Is the current abstraction right? |
+| **taste-audit** | "What do you think is wrong with this design?" | Is this beautiful? Where is it ugly? |
+| **intent-refine** | "Summarize / clarify this requirement" | What exactly do you want? Why? |
+| **judgment-redteam** | "Where might I be wrong?" | Where are you most likely wrong? |
+| **abstraction-uplift** | "What does this abstraction mean? Is it right?" | Is the current abstraction right? |
 
 ---
 
@@ -186,7 +186,7 @@ Tried it? Found a question that nailed you? Or one that felt useless? Open an is
 
 - [x] v0.1: Four skills in Claude Code format
 - [x] v0.1: Codex CLI compatibility (SKILL.md format is shared)
-- [x] v0.1: Explicit-only trigger policy
+- [x] v0.1: Bounded natural-language trigger policy
 - [ ] v0.2: Question bank iteration based on 3 months of usage
 - [ ] v0.2: Full English `SKILL.md` versions (currently Chinese only)
 - [ ] v0.3: "taste-audit for prose" (for writing, not just code)

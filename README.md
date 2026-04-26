@@ -2,7 +2,7 @@
 
 > **AI 时代最反潮流的一套 skill：不替你思考，只逼你思考。**
 
-> 本 fork 是 **explicit-only** 版本：四个 skill 只有在你明确点名 skill 名称或说"用 growth 的 X 模式"时才触发。普通的代码评审、需求澄清、方案讨论和重构请求，默认仍按正常 AI 协作处理。
+> 本 fork 是 **自然语言触发、有边界** 版本：你不用点名 skill，只要说"总结一下这个需求"、"这个设计怎么样"、"我哪里做得有问题"、"这个抽象是啥意思"这类话，就会进入对应的思考训练流程；如果你明确要求直接执行、直接改、直接给成稿，则按正常 AI 协作处理。
 
 **中文** | [English](./README.en.md)
 
@@ -46,12 +46,12 @@ growth 是一套**思考训练 skill**，装到你的 AI 编程工具里，不�
 
 ## 四个 skill
 
-| Skill | 显式触发示例 | 核心问题 |
+| Skill | 自然语言触发示例 | 核心问题 |
 |---|---|---|
-| **taste-audit** | "用 taste-audit 看这个" | 这东西美不美？丑在哪？ |
-| **intent-refine** | "用 intent-refine 精炼这个需求" | 你到底想要什么？为什么？ |
-| **judgment-redteam** | "用 judgment-redteam 攻击我的判断" | 你哪里可能是错的？ |
-| **abstraction-uplift** | "用 abstraction-uplift 看这个抽象" | 当前抽象合理吗？ |
+| **taste-audit** | "这个设计怎么样？你觉得我哪里做得有问题？" | 这东西美不美？丑在哪？ |
+| **intent-refine** | "总结一下这个需求 / 帮我理清这个需求" | 你到底想要什么？为什么？ |
+| **judgment-redteam** | "我哪里可能错了？这个决定有什么问题？" | 你哪里可能是错的？ |
+| **abstraction-uplift** | "这个抽象是啥意思？这个抽象合理吗？" | 当前抽象合理吗？ |
 
 ---
 
@@ -185,7 +185,7 @@ growth 做的是相反的事：**让你成为更好的自己**。
 
 - [x] v0.1: 四个 skill 的 Claude Code 版本
 - [x] v0.1: Codex CLI 兼容（SKILL.md 格式互通）
-- [x] v0.1: explicit-only 触发策略
+- [x] v0.1: 自然语言触发、有边界的触发策略
 - [ ] v0.2: 基于 3 个月使用反馈的问题库迭代
 - [ ] v0.2: 英文版 SKILL.md（目前仅中文）
 - [ ] v0.3: "taste-audit for prose"（审查写作品味，不只是代码）

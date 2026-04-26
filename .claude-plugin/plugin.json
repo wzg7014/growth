@@ -1,6 +1,6 @@
 {
   "name": "growth",
-  "description": "四个显式触发的思考训练 skill：taste-audit、intent-refine、judgment-redteam、abstraction-uplift。默认不自动介入普通协作，只有点名时才逼你思考。",
+  "description": "四个自然语言触发、有边界的思考训练 skill：taste-audit、intent-refine、judgment-redteam、abstraction-uplift。用普通话发起审查、澄清、红队或抽象追问时启动；直接执行请求仍按正常协作处理。",
   "version": "0.1.0",
   "author": {
     "name": "growth contributors"
